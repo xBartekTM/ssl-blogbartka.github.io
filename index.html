@@ -1,0 +1,440 @@
+
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='pl' lang='pl'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<title>Blog Bartka FM</title>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+<link rel='apple-touch-icon' href='images/appleicon72.png' />
+<meta name='description' content='Internetowa stacja radiowa - Przyjazne Radyjko' />
+<meta name='keywords' content='własne, radio, Przyjazne Radyjko, , internetowe, stacja, panel, radiowy, panelradiowy, prezentera, dj, dj-a, PanelRadiowy.pl' />
+<meta name='Copyright' Content='Blog Bartka S.A' />
+<meta name='Author' content='Bartłomiej Kicka' />
+<!-- QXV0b3JlbSBza3J5cHR1IGplc3QgRGFuaWVsIE1hc3pld3NraQ== -->
+<meta property='og:title' content='Odtwarzaj - Przyjazne Radyjko' />
+<meta property='og:description' content='Najlepsza muzyka, najlepsi prezenterzy, najlepsza zabawa! Dołącz do nas - włącz i słuchaj razem z nami internetowego radia: Przyjazne Radyjko' />
+<meta property='og:image' content='http://panelradiowy.pl/images/playfacebook.png' />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+<script src='class/mediaelement/mediaelement.min.js'></script>
+<link href='class/mediaelement/mediaelementplayer.min.css' rel='stylesheet'>
+<style type='text/css'>
+body {background-color: #140004;
+	background-image: url(http://i66.tinypic.com/2psp2l3.jpg);
+	background-attachment: fixed;
+	background-attachment: fixed;
+	background-position: top center;
+	padding: 0px;
+	margin: 0px;
+	color: white; 
+	font-family: 'Roboto', sans-serif;;
+	font-size: 12px;
+}
+
+.blok1 {
+	height: 280px;
+	width: 400px;
+	margin-top: -165px; 
+	margin-left: -216px;
+	position: fixed;
+	top: 50%; 
+	left: 50%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: black;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 15px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-size: 20px;
+	box-shadow: 0px 0px 20px black;
+	-moz-box-shadow: 0px 0px 20px black;
+	-webkit-box-shadow: 0px 0px 20px black;
+	-khtml-box-shadow: 0px 0px 20px black;
+	border: 1px solid black;
+}
+
+.blok2 {
+	height: 245px;
+	width: 400px;
+	margin-top: -110px; 
+	margin-left: -200px;
+	position: fixed;
+	top: 50%; 
+	left: 50%;
+}
+
+.itemtop {
+	width: 131px;
+	padding-top: 6px;
+	height: 21px;
+	float: left;
+	margin: 0px;
+	border-right: 1px solid #171717;
+	border-left: 1px solid #171717;
+	text-align: center;
+	color: #E6E6E6;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 12px;
+	background-image: -moz-linear-gradient(top, #212121, #000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#212121), to(#000));
+	background-image: -o-linear-gradient(top, #212121, #000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#212121', endColorstr='#000');
+	-ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#212121', endColorstr='#000')';
+	background-image: linear-gradient(top, #212121, #000);
+}
+
+.blok3 {
+	width: 400px;
+	background-color: #000000;
+	height: 5px;
+	margin: 0px;
+	border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-khtml-border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+}
+
+.itemtop:hover {
+	color: white;
+	background-image: -moz-linear-gradient(top, #141414, #000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#141414), to(#000));
+	background-image: -o-linear-gradient(top, #141414, #000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#141414', endColorstr='#000');
+	-ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr='#141414', endColorstr='#000')';
+	background-image: linear-gradient(top, #v, #000);;
+}
+
+.stopka {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 17px;
+	background-color: black;
+	opacity: 0.7;
+	filter: alpha(opacity = 70);
+	color: silver;
+	padding-top: 3px;
+	font-size: 11px;
+	text-align: center;
+
+}
+
+.info {
+	position: fixed;
+	top: 0;
+	margin-top: 100px;
+	left: 9%;
+	width: 330px;
+	height: 50px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+.infonapis {
+	position: absolute;
+	margin-left: 28px;
+	margin-top: 9px;
+	height: 15px;
+	width: 268px;
+	border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-khtml-border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	background: black;
+	background: rgba(0, 0, 0, 0.8);
+	filter: alpha(opacity = 80);
+	padding: 7px;
+	padding-left: 17px;
+	color: white;
+	font-size: 12px;
+	z-index: 20;
+	box-shadow: 0px 0px 10px black;
+	-moz-box-shadow: 0px 0px 10px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+	-khtml-box-shadow: 0px 0px 10px black;
+}
+
+.download {
+	position: absolute;
+	margin-top: 230px;
+	margin-left: 0px;
+	width: 410px;
+	color: silver;
+}
+
+.download a {
+	color: silver;
+	text-decoration: none;
+}
+
+.download a:hover {
+	color: white;
+}
+
+.stopka a {
+	color: silver;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.stopka a:hover {
+	text-decoration: underline;
+}
+
+.sms-text-box {
+	background-color: black;
+	border-radius: 0px 0px 0px 5px;
+	-moz-border-radius: 0px 0px 0px 5px;
+	-khtml-border-radius: 0px 0px 0px 5px;
+	-webkit-border-radius: 0px 0px 0px 5px;
+	width: 150px;
+	height: 215px;
+	float: left;
+	opacity: 0.8;
+	padding: 5px;
+	padding-left: 8px;
+	padding-right: 2px;
+	color: white;
+}
+
+#ekipa-icon {
+	position: fixed;
+	top: 140px;
+	right: 0px;
+	border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-khtml-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	background-color: black;
+	background-image: url(images/userradioicon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 46px;
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	margin-right: -40px;
+	z-index: 100;
+}
+
+#lista-icon {
+	position: fixed;
+	top: 200px;
+	right: 0px;
+	border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-khtml-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	background-color: black;
+	background-image: url(images/starradioicon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 46px;
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	margin-right: -40px;
+	z-index: 100;
+}
+
+.sms-icon {
+	border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-khtml-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	background-color: black;
+	background-image: url(images/smsradioicon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 46px;
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	float: left;
+}
+
+#sms-box {
+	position: fixed;
+	width: 200px;
+	height:210px;
+	top: 260px;
+	right: 0px;
+	padding: 0px;
+	z-index: 100;
+	margin-right: -200px;
+}
+
+#ekipa-icon:hover, #lista-icon:hover, .sms-icon:hover {
+	opacity: 1;
+}
+
+.android-icon:hover, .christmas-icon:hover {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+
+.android-icon {
+	display: block;
+	width: 172px;
+	height: 50px;
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	margin: 0px;
+	border: none;
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+	z-index: 90;
+}
+
+.android-icon img {
+	width: 172px;
+	height: 50px;
+	border: none;
+}
+
+.christmas-icon {
+	width: 256px;
+	height: 108px;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	margin: 0px;
+	border: none;
+	position: fixed;
+	bottom: 60px;
+	left: 0px;
+	z-index: 90;
+}
+
+#reklama {
+	height: 100px;
+	width: 750px;
+	margin-left: -375px;
+	position: fixed;
+	bottom: 30px; 
+	left: 50%;
+}
+</style>
+
+<script type='text/javascript'>
+function smsbox() {
+	if($('#sms-box').css('marginRight') == '0px') {
+		$('#sms-box').animate({marginRight: '-160px'}, 500 );
+	}else {
+		$('#sms-box').animate({marginRight: '0px'}, 500 );
+	}
+}
+
+function info()
+{
+	setTimeout(function(){
+			$('#info').animate({ opacity: 1, marginTop: '10px' }, 1500);
+			setTimeout(function(){ $('#info').fadeOut(3000); },8000);
+	},1000);
+}
+
+function zakladki()
+{
+	$('#ekipa-icon').animate({marginRight: '0px'}, 500 );
+	setTimeout(function(){
+		$('#lista-icon').animate({marginRight: '0px'}, 500 );
+		setTimeout(function(){
+			$('#sms-box').animate({marginRight: '-160px'}, 500 );
+		},500);
+	},500);
+}
+
+$(document).ready(function(){
+	
+	mejs.i18n.language('pl');
+	$('audio,video').mediaelementplayer({
+	  features: ['playpause', 'current', 'progress', 'volume']
+	});
+	
+	setTimeout(function(){
+		zakladki();
+		setTimeout(function(){
+			info();
+		},1000);
+	},1500);
+});
+
+
+function popupwindow(url, title, w, h) {
+  var left = (screen.width/2)-(w/2);
+  var top = (screen.height/2)-(h/2);
+  return window.open(url, title, 'scrollbars=yes, toolbar=no, menubar=no, location=no, personalbar=no, resizable=no, directories=no, status=no, width='+w+', height='+h+', top='+top+', left='+left).focus();
+} 
+
+function share() {
+	popupwindow('http://www.facebook.com/sharer/sharer.php?u=http://przyjazneradio.panelradiowy.pl/radio','share',600,350);
+}
+</script>
+
+<script type='text/javascript'>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11880176-13']);
+_gaq.push(['_setDomainName', 'panelradiowy.pl']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+<body>
+
+<!-- Radio założone na www.PanelRadiowy.pl - Nie czekaj! Ty też możesz prowadzić swoją własną internetową rozgłośnię radiową! --><div class='info' id='info'>
+<div class='infonapis'>Podziel się linkiem do tego radia ze znajomymi ;)</div>
+<img src='images/upradio.png' style='position: absolute; z-index: 30; width: 48px; height: 45px;'>
+</div><div id='sms-box'>
+<div class='sms-icon' onClick='smsbox();' title='Pozdrowienia SMS'></div>
+<div class='sms-text-box'>
+<b>Pozdrawiaj SMS-em!</b><br>
+Aby wysyłać do nas pozdrowienia za pośrednictwem SMS,<br>wyślij na numer<br><b>517-750-117</b> treść wiadomości poprzedzając ją numerem 6605.<br>
+<span style='font-size: 11px;'><br>przykład: <u>6605 Pozdrawiam wszystkich słuchaczy!</u></span><br><span style='font-size: 9px; color: silver;'><br>
+Koszt wiadomości jak za zwykły SMS według cennika Twojego operatora.</span>
+</div>
+</div><div id='ekipa-icon' onclick="popupwindow('http://przyjazneradio.panelradiowy.pl/embed.php?script=ekipa','ekipa',510,600);" title='Prezenterzy'></div>
+<div id='lista-icon' onclick="popupwindow('','lista',590,600);" title='Lista przebojów'></div>
+
+<div class='blok1'><div style='position: absolute; width: 400px; height: 100px; margin-top: -130px;'><center><img src='''></center></div><img src='images/iconradio.png' style='position: absolute; margin-top: -7px;'><span style='display: block; margin-left: 44px; width: 350px; overflow: hidden;'>Blog Bartka FM</span></div>
+<div class='blok2'>
+<div class='download'>Słuchaj we własnym odtwarzaczu 
+<a href='http://s1.slotex.pl:7336/listen.pls' title='Kliknij aby pobrać i odtwarzać na swoim komputerze'><img src='images/playicon.png' style='margin-left: 5px; margin-right: 1px; width: 17px; height: 17px; vertical-align: middle; border: none;'><b>Pobierz</b></a>
+</div>
+<div class='itemtop' style='border-left: 1px solid black; border-top: 1px solid black; border-radius: 5px 0px 0px 0px; -moz-border-radius: 5px 0px 0px 0px; -khtml-border-radius: 5px 0px 0px 0px; -webkit-border-radius: 5px 0px 0px 0px;' onclick="popupwindow('#','ramowka',590,600);">Ramówka</div>
+<div class='itemtop' style='border-top: 1px solid black; width: 132px;' onclick="popupwindow('#','pozdro',300,250);">Pozdrowienia</div>
+<div class='itemtop' style='border-right: 1px solid black; border-top: 1px solid black; border-radius: 0px 5px 0px 0px; -moz-border-radius: 0px 5px 0px 0px; -khtml-border-radius: 0px 5px 0px 0px; -webkit-border-radius: 0px 5px 0px 0px;'onclick="popupwindow('#','utwor',300,220);">Zamów utwór</div>
+<iframe src='styl11/staty2.php?ip=s1.slotex.pl&amp;port=7336&amp;v=2&amp;style=4&amp;time=60&amp;color=000000&amp;idp=6605' border='0' marginwidth='0' marginheight='0' frameborder='no' scrolling='no' width='400' height='150'></iframe>
+
+<audio controls preload='none' width='400' style='width: 400px;' id='shoutcastplayer' autoplay='true'><source src='http://s1.slotex.pl:7336/;stream.mp3' type='audio/mpeg'></audio>
+<script src='class/mediaelement/mediaelement-and-player.min.js'></script>
+<script src='class/mediaelement/lang/pl.js'></script>
+<script src='javascript/scp.min.js'></script>
+
+<div class='blok3'></div>
+</div>
+<div class='stopka'>Strumień Nadawany przez Blog Bartka S.A Wszelkie Prawa Zastrzeżone!. <a target='_blank' href='http://blogbartka.cba.pl'>Blog Bartka</a></div>
+
+<a href='http://play.google.com/store/apps/details?id=com.panelradiowy' target='_blank' class='android-icon' title='Aplikacja Panel Radiowy na system Android'><img src='images/googleplay.png'></a><div id="reklama"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Panel Radiowy Radio Duża -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:750px;height:100px"
+     data-ad-client="ca-pub-6820433933839897"
+     data-ad-slot="9365655681"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</body>
+</html>
